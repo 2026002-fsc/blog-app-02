@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+
+    header {
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid grey;
+        top: 0;
+
+        h1 {
+            margin-left: 50px;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        p {
+            margin: auto 0 auto;
+            margin-right: 50px;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
+    .search {
+        top: 0;
+        position: fixed;
+        width: 50%;
+        margin-left: 25%;
+        top: 30px;
+
+        input {
+            width: 300px;
+            height: 2rem;
+            border: 2px solid gray;
+        }
+    }
+
+    main {
+
+        .guide {
+            width: 25%;
+            position: fixed;
+
+            p {
+
+                a {
+                    display: inline-block;
+                    margin-left: 25%;
+                    margin-top: 20px;
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+
+        .center {
+            max-width: 50%;
+            margin: 100px auto 0;
+
+            .blogContents {
+                    margin-top: 15px;
+                    padding: 2px;
+                    border: 2px solid gray;
+
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+
+            .postCenter {
+
+                .postContents {
+                    margin-top: 20px;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    input {
+                        width: 100%;
+                    }
+
+                    .mainText {
+                        min-width: 100%;
+                        max-width: 100%;
+                        min-height: 100px;
+                        height: 250px;
+                        max-height: 300px;
+                    }
+
+                    button {
+                        width: 50px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

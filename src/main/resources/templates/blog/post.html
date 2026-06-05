@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>all Blogs</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="/blog">spring</a></h1>
+        <p><a href="/post">投稿</a></p>
+    </header>
+    <div class="search">
+<form action="/search" method="post">
+            <input type="text" placeholder="キーワード検索" name="search">
+        </form>    </div>
+    <main>
+        <div class="guide">
+            <p><a href="/blog">ホーム</a></p>
+            <p><a href="">プロフィール</a></p>
+        </div>
+        <div class="center">
+            <div class="postCenter">
+                <form action="/postblog">
+                    <div class="postContents">
+                        <p>　</p>
+                        <p>タイトル</p>
+                        <input type="text" placeholder="タイトルを入力" name="title">
+                    </div>
+                    <div class="postContents">
+                        <p>本文</p>
+                        <textarea name="mainText" id="" class="mainText" placeholder="本文を入力"></textarea>
+                    </div>
+                    <div class="postContents">
+                        <button type="submit" >保存</button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>

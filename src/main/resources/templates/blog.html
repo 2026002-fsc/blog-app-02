@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>all Blogs</title>
 </head>
+
 <body>
-    <h1>blog</h1>
+    <header>
+        <h1><a href="/blog">spring</a></h1>
+        <p><a href="/post">投稿</a></p>
+    </header>
+    <div class="search">
+        <form action="/search" method="post">
+            <input type="text" placeholder="キーワード検索" name="search">
+        </form>
+    </div>
+    <main>
+        <div class="guide">
+            <p><a href="/blog">ホーム</a></p>
+            <p><a href="">プロフィール</a></p>
+        </div>
+        <div class="center">
+            <div th:each="blog : ${blogs}" class="blogContents" >
+                <a href="/detail">
+                    <h2 th:text="${blog.title}">ポラーノの広場</h2>
+                    <p th:text="${blog.mainText}">あのイーハトーヴォのすきとおった風、夏でもそこに冷たさを持つ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+                </a>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
