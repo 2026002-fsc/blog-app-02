@@ -24,10 +24,6 @@
             <p><a href="">プロフィール</a></p>
         </div>
         <div class="center">
-
-            <input type="date">
-            <input type="time" id="appointment" name="appointment" min="09:00" max="18:00" required />
-            
             <div th:each="blog : ${blog}" class="blogContents">
                 <a th:href="@{/detail/{id}(id=${blog.id})}">
                     <h2 th:text="${blog.title}">ポラーノの広場</h2>
