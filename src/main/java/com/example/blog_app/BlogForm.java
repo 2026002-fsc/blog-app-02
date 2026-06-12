@@ -1,24 +1,18 @@
 package com.example.blog_app;
 
-public class Blog {
-    private final Long id;
+public class BlogForm {
     private final String title;
     private final String mainText;
 
-    public Blog(Long id, String title, String mainText) {
-        this.id = id;
+    public BlogForm(String title, String mainText) {
         this.title = title;
         this.mainText = mainText;
-    }
-
-    public Long getId() {
-        return id;
     }
 
     public String getTitle() {
         return title;
     }
-
+    
     public String getMainText() {
         return mainText;
     }

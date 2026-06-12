@@ -67,15 +67,23 @@ body {
             margin: 100px auto 0;
 
             .blogContents {
-                    margin-top: 15px;
-                    padding: 2px;
-                    border: 2px solid gray;
+                margin-top: 15px;
+                padding: 2px;
+                border: 2px solid gray;
 
-                    a{
-                        text-decoration: none;
-                        color: black;
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+                form {
+                    text-align: right;
+                    button {
+                        right: 0;
                     }
                 }
+
+            }
 
             .postCenter {
 

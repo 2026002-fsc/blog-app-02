@@ -1,14 +1,14 @@
 package com.example.blog_app;
 
-public class Blog {
+public class BlogAll {
     private final Long id;
     private final String title;
-    private final String mainText;
+    private final String subText;
 
-    public Blog(Long id, String title, String mainText) {
+    public BlogAll(Long id, String title, String subText) {
         this.id = id;
         this.title = title;
-        this.mainText = mainText;
+        this.subText = subText;
     }
 
     public Long getId() {
@@ -19,7 +19,7 @@ public class Blog {
         return title;
     }
 
-    public String getMainText() {
-        return mainText;
+    public String getSubText() {
+        return subText;
     }
 }

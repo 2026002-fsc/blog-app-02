@@ -9,28 +9,37 @@
 </head>
 
 <body>
-    <header>
+    <header th:fragment="commonHeader">
         <h1><a href="/blog">spring</a></h1>
         <p><a href="/post">投稿</a></p>
     </header>
-    <div class="search">
+    <div class="search" th:fragment="commonSearch">
         <form action="/search" method="post">
             <input type="text" placeholder="キーワード検索" name="search">
         </form>
     </div>
     <main>
-        <div class="guide">
+        <div class="guide" th:fragment="commonguide">
             <p><a href="/blog">ホーム</a></p>
             <p><a href="">プロフィール</a></p>
         </div>
         <div class="center">
-            <div th:each="blog : ${blogs}" class="blogContents" >
-                <a href="/detail">
+
+            <input type="date">
+            <input type="time" id="appointment" name="appointment" min="09:00" max="18:00" required />
+            
+            <div th:each="blog : ${blog}" class="blogContents">
+                <a th:href="@{/detail/{id}(id=${blog.id})}">
                     <h2 th:text="${blog.title}">ポラーノの広場</h2>
-                    <p th:text="${blog.mainText}">あのイーハトーヴォのすきとおった風、夏でもそこに冷たさを持つ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+                    <p th:text="${blog.subText}">あのイーハトーヴォのすきとおった風、夏でもそこに冷たさを持つ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+                    <form th:action="@{/blog/{id}/delete(id=${blog.id})}" method="post">
+                        <button type="submit">削除</button>
+                    </form>
                 </a>
             </div>
+
         </div>
+
     </main>
 </body>
 

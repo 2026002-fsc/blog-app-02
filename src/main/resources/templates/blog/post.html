@@ -9,22 +9,13 @@
 </head>
 
 <body>
-    <header>
-        <h1><a href="/blog">spring</a></h1>
-        <p><a href="/post">投稿</a></p>
-    </header>
-    <div class="search">
-<form action="/search" method="post">
-            <input type="text" placeholder="キーワード検索" name="search">
-        </form>    </div>
+    <header th:replace="'blog' :: commonHeader"></header>
+    <div class="search" th:replace="'blog' :: commonSearch"></div>
     <main>
-        <div class="guide">
-            <p><a href="/blog">ホーム</a></p>
-            <p><a href="">プロフィール</a></p>
-        </div>
+        <div class="guide" th:replace="'blog' :: commonguide"></div>
         <div class="center">
             <div class="postCenter">
-                <form action="/postblog">
+                <form action="/postblog" method="post">
                     <div class="postContents">
                         <p>　</p>
                         <p>タイトル</p>
@@ -35,7 +26,7 @@
                         <textarea name="mainText" id="" class="mainText" placeholder="本文を入力"></textarea>
                     </div>
                     <div class="postContents">
-                        <button type="submit" >保存</button>
+                        <button type="submit">保存</button>
                     </div>
                 </form>
 

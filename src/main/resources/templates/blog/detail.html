@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -9,25 +9,17 @@
 </head>
 
 <body>
-    <header>
-        <h1><a href="/blog">spring</a></h1>
-        <p><a href="post">投稿</a></p>
-    </header>
-    <div class="search">
-<form action="/search" method="post">
-            <input type="text" placeholder="キーワード検索" name="search">
-        </form>    </div>
+    <header th:replace="'blog' :: commonHeader"></header>
+    <div class="search" th:replace="'blog' :: commonSearch"></div>
     <main>
-        <div class="guide">
-            <p><a href="/blog">ホーム</a></p>
-            <p><a href="">プロフィール</a></p>
-        </div>
+        <div class="guide" th:replace="'blog' :: commonguide"></div>
         <div class="center">
             <div class="detailCenter">
                 <p>　</p>
-                <h2>ポラーノの広場</h2>
-                <p>あのイーハトーヴォのすきとおった風、夏でもそこに冷たさを持つ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。<br><br>
-                    またそのなかでいっしょになったたくさんのひとたち、ファゼーロとロザーロ、羊飼のミーロや、顔の赤いこどもたち、地主のテーモ、山猫博士のボーガント・デストゥパーゴなど、いまこの暗い巨きな石の建物のなかで考えていると、みんなむかし風のなつかしい青い幻燈のように思われます。では、わたくしはいつかの小さなみだしをつけながら、しずかにあの年のイーハトーヴォの五月から十月までを書きつけましょう。</p>
+                <h2 th:text="${blog.title}">ポラーノの広場</h2>
+                <p th:text="${blog.mainText}">あのイーハトーヴォのすきとおった風、夏でもそこに冷たさを持つ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。<br><br>
+                    またそのなかでいっしょになったたくさんのひとたち、ファゼーロとロザーロ、羊飼のミーロや、顔の赤いこどもたち、地主のテーモ、山猫博士のボーガント・デストゥパーゴなど、いまこの暗い巨きな石の建物のなかで考えていると、みんなむかし風のなつかしい青い幻燈のように思われます。では、わたくしはいつかの小さなみだしをつけながら、しずかにあの年のイーハトーヴォの五月から十月までを書きつけましょう。
+                </p>
             </div>
         </div>
     </main>
